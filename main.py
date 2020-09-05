@@ -11,10 +11,8 @@ while True:
     print("Kirjoita help()")
     break
   except socket.error:
-    a = False
-    if a is False:
-       print ("IP Osoitteeseen ei voitu yhdistää.")
-       sys.exit(0)
+    print ("IP Osoitteeseen ei voitu yhdistää.")
+    sys.exit(0)
 #API
 loc = get('https://ipapi.co/'+ipv+'/json/')
 data = json.load(urlopen('https://ipapi.co/'+ipv+'/json/'))
